@@ -85,6 +85,7 @@
     "description": "Management and observability for OpenShift sandboxed containers (Kata + peer pods).",
     "exposedModules": {
       "SandboxesOverview": "./components/SandboxesOverview",
+      "SandboxesOverviewRedirect": "./components/SandboxesOverviewRedirect",
       "SandboxWorkloadsList": "./components/SandboxWorkloadsList",
       "CreateSandboxWorkload": "./components/CreateSandboxWorkload",
       "SandboxWorkloadDetail": "./components/SandboxWorkloadDetail",

@@ -40,7 +40,7 @@
       "id": "sandboxes-overview",
       "section": "sandboxes",
       "name": "%plugin__osc-openshift-console-plugin~Overview%",
-      "href": "/sandboxes",
+      "href": "/sandboxes/overview",
       "perspective": "admin"
     },
     "flags": { "required": ["OSC_KATACONFIG"] }
@@ -85,6 +85,15 @@
     "properties": {
       "exact": true,
       "path": "/sandboxes",
+      "component": { "$codeRef": "SandboxesOverviewRedirect" }
+    },
+    "flags": { "required": ["OSC_KATACONFIG"] }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/sandboxes/overview",
       "component": { "$codeRef": "SandboxesOverview" }
     },
     "flags": { "required": ["OSC_KATACONFIG"] }
