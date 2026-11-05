@@ -3,28 +3,37 @@
   "packageRules": [
     {
       "description": "Group all linter and formatter updates",
-      "matchPackagePatterns": ["eslint", "stylelint", "prettier"],
-      "groupName": "linters and formatters"
+      "groupName": "linters and formatters",
+      "matchPackageNames": ["/eslint/", "/stylelint/", "/prettier/"]
     },
     {
       "description": "Group PatternFly updates (they release together)",
-      "matchPackagePrefixes": ["@patternfly/"],
-      "groupName": "PatternFly"
+      "groupName": "PatternFly",
+      "matchPackageNames": ["@patternfly/{/,}**"]
     },
     {
       "description": "Group build tooling updates",
-      "matchPackageNames": ["webpack", "webpack-cli", "webpack-dev-server", "css-loader", "style-loader", "swc-loader", "copy-webpack-plugin", "fork-ts-checker-webpack-plugin"],
+      "matchPackageNames": [
+        "webpack",
+        "webpack-cli",
+        "webpack-dev-server",
+        "css-loader",
+        "style-loader",
+        "swc-loader",
+        "copy-webpack-plugin",
+        "fork-ts-checker-webpack-plugin"
+      ],
       "groupName": "build tooling"
     },
     {
       "description": "Group type definition updates",
-      "matchPackagePrefixes": ["@types/"],
-      "groupName": "type definitions"
+      "groupName": "type definitions",
+      "matchPackageNames": ["@types/{/,}**"]
     },
     {
       "description": "Group test tooling updates",
-      "matchPackagePrefixes": ["@testing-library/"],
-      "groupName": "testing-library"
+      "groupName": "testing-library",
+      "matchPackageNames": ["@testing-library/{/,}**"]
     },
     {
       "description": "Group Dockerfile base image updates",
